@@ -9,3 +9,10 @@ hamburger.addEventListener('click', () => {
     line.classList.toggle('toggle');
   })
 });
+navLinks.addEventListener('click', () => {
+  navLinks.classList.toggle('open');
+  burgerLine.forEach(line => {
+    line.classList.toggle('toggle');
+  })
+});
+

@@ -4,11 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PortfolioPurple</title>
+  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
   <link rel="stylesheet" href="styles.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;800&display=swap" rel="stylesheet">
 </head>
-  <section class="home">
+  <section id="home">
     <div class="logo showLogo">krzszk.com</div>
     <nav>
         <div class="hamburger">
@@ -31,6 +32,46 @@
       </div>  
     </div>
   </section>
+  <section class="my-work" id="mywork">
+    <div class="work-watermark">MY WORK</div>
+    <div class="work-container"></div>
+      <div class="work-title">Here you can find my projects</div>
+      <div class="main-carousel" data-flickity='{ "freeScroll": true, "initialIndex": 2, "pageDots": false, "prevNextButtons": false }'>
+        <div class="carousel-cell">
+          <div class="card-title">MAKEUP PAGE</div>
+          <div class="card-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+          <div class="card-link">Live page version</div>
+          <div class="card-link">Review code github</div>
+        </div>
+        <div class="carousel-cell">
+          <div class="card-title">TREEHOUSE</div>
+          <div class="card-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+          <div class="card-link">Live page version</div>
+          <div class="card-link">Review code github</div>
+        </div>
+        <div class="carousel-cell">
+          <div class="card-title">TICTACTOE</div>
+          <div class="card-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+          <div class="card-link">Live page version</div>
+          <div class="card-link">Review code github</div>
+        </div>
+        <div class="carousel-cell">
+          <div class="card-title">OLD PORTFOLIO</div>
+          <div class="card-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+          <div class="card-link">Live page version</div>
+          <div class="card-link">Review code github</div>
+        </div>
+        <div class="carousel-cell">
+          <div class="card-title">RATES API</div>
+          <div class="card-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+          <div class="card-link">Live page version</div>
+          <div class="card-link">Review code github</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
   <script src="app.js"></script>
+
 </body>
 </html>

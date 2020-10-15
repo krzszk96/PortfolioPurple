@@ -81,7 +81,7 @@ ul li {
     clip-path: circle(100px at 100% -18%);
     -webkit-clip-path: circle(100px at 100% -18%);
     transition: all 1s ease-out;
-    z-index: 1;
+    z-index: 2;
   }
   .nav-links.open {
     clip-path: circle(1500px at 100% -18%);
@@ -89,7 +89,7 @@ ul li {
   }
   .hamburger {
     cursor: pointer;
-    z-index: 2;
+    z-index: 3;
     margin: 15px 20px 0 0;
   }
   .toggle {
@@ -288,3 +288,126 @@ ul li {
 }
 
 //*CONTACT SECTION*//
+#contact-title {
+  margin-top: 70px !important;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+input[type="text"] {
+  width: 500px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 2px solid $purpleTheme;
+  background: #fff;
+  border-radius: 25px;
+  box-sizing: border-box;
+  border-radius: 25px;
+  outline: none;
+  font-family: "Open Sans";
+  z-index: 1;
+}
+#message-content {
+  height: 200px;
+}
+::placeholder {
+  font-family: "Open Sans";
+  color: #000;
+}
+textarea {
+  width: 500px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 2px solid $purpleTheme;
+  background-color: #fff;
+  border-radius: 25px;
+  box-sizing: border-box;
+  border-radius: 25px;
+  outline: none;
+  resize: none;
+  font-family: "Open Sans";
+  z-index: 1;
+}
+input[type="submit"] {
+  width: 150px;
+  color: #fff;
+  font-family: "Open Sans";
+  font-size: 14px;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 25px;
+  background-color: $purpleTheme;
+  cursor: pointer;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+  &:hover {
+    background-color: $purpleDark;
+  }
+}
+.contanct-container {
+  position: relative;
+}
+.contact-watermark {
+  position: absolute;
+  left: -12%;
+  top: 35%;
+  transform: rotate(-90deg);
+  transform-origin: right, top;
+  color: $purpleTheme;
+  font-family: "Open Sans";
+  font-weight: 800;
+  font-size: 120px;
+  opacity: 0.2;
+}
+//*MYWORK SECTION TABLET*//
+@media screen and (max-width: 768px) {
+  .contact-watermark {
+    width: 600px;
+    white-space: nowrap;
+    left: -25%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .contact-watermark {
+    width: 600px;
+    white-space: nowrap;
+    left: -60%;
+    top: 40%;
+  }
+  input[type="text"] {
+    width: 300px;
+  }
+  textarea {
+    width: 300px;
+  }
+  input[type="submit"] {
+    width: 120px;
+    font-size: 10px;
+  }
+}
+//*MYWORK FOOTER*//
+.footer {
+  position: absolute;
+  bottom: -70%;
+  right: 10%;
+}
+.footer a img {
+  width: 50px;
+  height: 50px;
+}
+@media screen and (max-width: 768px) {
+  .footer {
+    bottom: -90%;
+    right: 10%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .footer {
+    bottom: -25%;
+  }
+}

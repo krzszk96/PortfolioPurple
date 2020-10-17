@@ -9,6 +9,7 @@ $purpleDark: #4a29ac;
 html,
 body {
   scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
 }
 section {
   position: relative;
@@ -32,8 +33,10 @@ nav {
   display: flex;
   margin: 30px 0 -65px 30px;
 }
-.language-pl,
-.language-eng {
+.language-wrap {
+  display: flex;
+}
+.language {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -41,7 +44,8 @@ nav {
   font-size: 20px;
   font-weight: 800;
   cursor: pointer;
-  &:hover {
+  -webkit-tap-highlight-color: transparent;
+  &:active {
     transform: scale(1.2);
   }
 }
@@ -50,6 +54,10 @@ nav {
 }
 #eng {
   margin-left: 20px;
+}
+.language a {
+  text-decoration: none;
+  color: #000;
 }
 div.scroll-button {
   position: fixed;
@@ -61,10 +69,11 @@ div.scroll-button {
   right: 50%;
   margin-bottom: 20px;
   margin-right: -25px;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
   z-index: 5; //change all indexes to one more
   &:hover {
     background-color: $purpleDark;
-    cursor: pointer;
   }
 }
 .scroll-button img {
@@ -121,6 +130,19 @@ ul li {
 }
 //*NAVIGATION MOBILE*//
 @media screen and (max-width: 768px) {
+  div.scroll-button {
+    &:hover {
+      background-color: $purpleTheme;
+    }
+  }
+  .scroll-button img {
+    &:hover {
+      transform: scale(1);
+    }
+    &:active {
+      transform: scale(1.2);
+    }
+  }
   .language-pl,
   .language-eng {
     font-size: 14px;
@@ -302,6 +324,9 @@ ul li {
   margin-bottom: 50px;
 }
 .carousel-cell {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: space-between !important;
   background: $purpleTheme;
   width: 300px;
   height: 400px;
@@ -315,6 +340,7 @@ ul li {
   color: #fff;
   font-size: 24px;
   text-align: center;
+  margin-top: 20px;
 }
 .card-description {
   font-family: "Open Sans";
@@ -329,10 +355,17 @@ ul li {
   font-size: 14px;
   text-align: center;
   margin: 0 15px 5px 15px;
+}
+.card-link a {
+  text-decoration: none;
+  color: #fff;
   cursor: pointer;
   &:hover {
     color: #000;
   }
+}
+#bottom-link {
+  margin-bottom: 20px;
 }
 //*MYWORK SECTION TABLET*//
 @media screen and (max-width: 768px) {

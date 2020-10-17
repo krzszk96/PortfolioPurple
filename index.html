@@ -13,8 +13,10 @@
     <div class="scroll-button"><img src="./images/arrdown.png"></div>
     <div class="logo-wrap">
       <div class="logo showLogo">krzszk.com</div>
-      <div class="language-pl" id="pl">PL</div>
-      <div class="language-eng" id="eng">ENG</div>
+      <div class="language-wrap">
+        <div class="language" id="pl" language='polish'><a href="#" >PL</a></div>
+        <div class="language" id="eng" language='english'>EN</div>
+      </div>
     </div>
     
     <nav>
@@ -24,9 +26,9 @@
           <div class="line"></div>
         </div>
         <ul class="nav-links">
-          <li><a href="#home">HOME</a></li>
-          <li><a href="#mywork">MY WORK</a></li>
-          <li><a href="#contact">CONTACT</a></li>
+          <li ><a href="#home" class="menu-home">HOME</a></li>
+          <li><a href="#mywork" class="menu-work">MY WORK</a></li>
+          <li><a href="#contact" class="menu-contact">CONTACT</a></li>
         </ul>
     </nav>
     <div class="home-container">
@@ -45,33 +47,43 @@
       <div class="main-carousel" data-flickity='{ "freeScroll": true, "initialIndex": 2, "pageDots": false, "prevNextButtons": false }'>
         <div class="carousel-cell">
           <div class="card-title">MAKEUP PAGE</div>
-          <div class="card-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
-          <div class="card-link">Live page version</div>
-          <div class="card-link">Review code github</div>
+          <div class="card-description dsc1">Simple makeup businness page layout. Page contains services gallery, pricing and visits booking calendar. Project will be still developed.</div>
+          <div>
+            <div class="card-link "><a class="first-link" href="http://test.krzszk.com/" >Live page version</a></div>
+            <div class="card-link" id="bottom-link"><a class="second-link" href="https://github.com/krzszk96/KLAUDIA_WLODARZ_MAKEUP">Review code github</a></div>
+          </div>
         </div>
         <div class="carousel-cell">
           <div class="card-title">TREEHOUSE</div>
-          <div class="card-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
-          <div class="card-link">Live page version</div>
-          <div class="card-link">Review code github</div>
+          <div class="card-description dsc2">Landing page for any business. This template was created from psd file. Page created for learingn purposes</div>
+          <div>
+            <div class="card-link"><a class="first-link" href="https://krzszk96.github.io/" >Live page version</a></div>
+            <div class="card-link" id="bottom-link"><a class="second-link" href="https://github.com/krzszk96/krzszk96.github.io">Review code github</a></div>
+          </div>
         </div>
         <div class="carousel-cell">
           <div class="card-title">TICTACTOE</div>
-          <div class="card-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
-          <div class="card-link">Live page version</div>
-          <div class="card-link">Review code github</div>
+          <div class="card-description dsc3">Tic Tac Toe game created for learining purposes. Game handles 2 players. In the future AI can be added to improve functionality</div>
+          <div>
+            <div class="card-link"><a class="first-link" href="https://krzszk96.github.io/TicTacToe-Game/" >Live page version</a></div>
+            <div class="card-link" id="bottom-link"><a class="second-link" href="https://github.com/krzszk96/TicTacToe-Game">Review code github</a></div>
+          </div>
         </div>
         <div class="carousel-cell">
           <div class="card-title">OLD PORTFOLIO</div>
-          <div class="card-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
-          <div class="card-link">Live page version</div>
-          <div class="card-link">Review code github</div>
+          <div class="card-description dsc4">My previous portfolio page. This page was used as a template for current purple page. Sligtly worse design.</div>
+          <div>
+            <div class="card-link"><a class="first-link">Live page version</a></div>
+            <div class="card-link" id="bottom-link"><a class="second-link" href="https://github.com/krzszk96/TicTacToe-Game">Review code github</a></div>
+          </div>
         </div>
         <div class="carousel-cell">
           <div class="card-title">RATES API</div>
-          <div class="card-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
-          <div class="card-link">Live page version</div>
-          <div class="card-link">Review code github</div>
+          <div class="card-description dsc5">Coming soon!</div>
+          <div>
+            <div class="card-link"><a class="first-link">Live page version</a></div>
+            <div class="card-link" id="bottom-link"><a class="second-link">Review code github</a></div>
+          </div>
         </div>
       </div>
     </div>
@@ -82,9 +94,9 @@
       <div class="work-title" id="contact-title">Here you can contact me</div>
       <form action="">
         <input type="text" id="message-title" name="msg-title" placeholder="Type Title here"/>
-        <input type="text" id="mail=to" name="m-to" placeholder="Type Your e-mail here"/>
+        <input type="text" id="mail" name="m-to" placeholder="Type Your e-mail here"/>
         <textarea id="message-content" name="msg-content" placeholder="Type Your message to me here" rows="4" cols="50"></textarea>
-        <input type="submit" value="SEND" />
+        <input type="submit" id="btnSend" value="SEND"  />
       </form>
     </div>
     <footer>

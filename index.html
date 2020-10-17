@@ -10,10 +10,16 @@
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;800&display=swap" rel="stylesheet">
 </head>
   <section id="home">
-    <div class="logo showLogo">krzszk.com</div>
+    <div class="scroll-button"><img src="./images/arrdown.png"></div>
+    <div class="logo-wrap">
+      <div class="logo showLogo">krzszk.com</div>
+      <div class="language-pl" id="pl">PL</div>
+      <div class="language-eng" id="eng">ENG</div>
+    </div>
+    
     <nav>
         <div class="hamburger">
-          <div class="line"></div>
+          <div class="line" id="line1"></div>
           <div class="line"></div>
           <div class="line"></div>
         </div>
@@ -80,14 +86,13 @@
         <textarea id="message-content" name="msg-content" placeholder="Type Your message to me here" rows="4" cols="50"></textarea>
         <input type="submit" value="SEND" />
       </form>
-      <div class="footer">
-        <a><img src="./images/linkedin.png" /></a>
-        <a href="https://github.com/krzszk96"><img src="./images/github.png" /></a>
-      </div>
     </div>
-    
+    <footer>
+      <a href="https://pl.linkedin.com/"><img src="./images/linkedin.png" /></a>
+      <a href="https://github.com/krzszk96"><img src="./images/github.png" /></a>
+    </footer>
   </section>  
-    
+  
   <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
   <script src="app.js"></script>
 

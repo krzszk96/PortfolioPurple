@@ -6,11 +6,15 @@ $purpleDark: #4a29ac;
   padding: 0;
   box-sizing: border-box;
 }
+html,
+body {
+  scroll-behavior: smooth;
+}
 section {
+  position: relative;
   height: 100vh;
   overflow: hidden;
 }
-
 //*NAVIGATION*//
 nav {
   display: flex;
@@ -23,7 +27,52 @@ nav {
   font-family: "Open Sans";
   font-weight: 800;
   font-size: 36px;
+}
+.logo-wrap {
+  display: flex;
   margin: 30px 0 -65px 30px;
+}
+.language-pl,
+.language-eng {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Open Sans";
+  font-size: 20px;
+  font-weight: 800;
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+#pl {
+  margin-left: 50px;
+}
+#eng {
+  margin-left: 20px;
+}
+div.scroll-button {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  background-color: $purpleTheme;
+  border-radius: 25px;
+  bottom: 0;
+  right: 50%;
+  margin-bottom: 20px;
+  margin-right: -25px;
+  z-index: 5; //change all indexes to one more
+  &:hover {
+    background-color: $purpleDark;
+    cursor: pointer;
+  }
+}
+.scroll-button img {
+  width: 50px;
+  height: 50px;
+  &:hover {
+    transform: scale(1.2);
+  }
 }
 .nav-links {
   display: flex;
@@ -52,11 +101,14 @@ ul li {
   font-weight: 600;
   font-size: 18px;
   color: white;
+  outline: none;
 }
 //*NAVIGATION TABLET*//
 @media screen and (max-width: 992px) {
   .logo {
     font-size: 30px;
+  }
+  .logo-wrap {
     margin: 30px 0 -55px 30px;
   }
   .nav-links li {
@@ -69,6 +121,13 @@ ul li {
 }
 //*NAVIGATION MOBILE*//
 @media screen and (max-width: 768px) {
+  .language-pl,
+  .language-eng {
+    font-size: 14px;
+  }
+  #pl {
+    margin-left: 20px;
+  }
   .nav-links {
     position: fixed;
     background: $purpleTheme;
@@ -81,7 +140,7 @@ ul li {
     clip-path: circle(100px at 100% -18%);
     -webkit-clip-path: circle(100px at 100% -18%);
     transition: all 1s ease-out;
-    z-index: 2;
+    z-index: 6;
   }
   .nav-links.open {
     clip-path: circle(1500px at 100% -18%);
@@ -89,9 +148,20 @@ ul li {
   }
   .hamburger {
     cursor: pointer;
-    z-index: 3;
+    z-index: 7;
     margin: 15px 20px 0 0;
+    outline: none;
   }
+  //here need to be menu fold use coma to separate ,,,,,,
+  // .open .line1 {
+  //   transform: rotate(-45deg) translate(-5px, 6px);
+  // }
+  // .open .line2 {
+  //   opacity: 0;
+  // }
+  // .open .line3 {
+  //   transform: rotate(45deg) translate(-5px, -6px);
+  // }
   .toggle {
     background: #fff !important;
   }
@@ -104,6 +174,7 @@ ul li {
     background: $purpleTheme;
     margin: 7px;
     border-radius: 25px;
+    outline: none;
   }
   .nav-links li {
     &:hover {
@@ -158,7 +229,23 @@ ul li {
   display: flex;
   justify-content: center;
 }
-//*HOME SECTION MOBILE*//
+//*HOME SECTION LAPTOP*//
+@media screen and (max-width: 992px), screen and (max-height: 760px) {
+  .home-title {
+    font-size: 30px;
+  }
+  .home-description {
+    font-size: 14px;
+  }
+  .home-img img {
+    width: 80%;
+  }
+  .language-pl,
+  .language-eng {
+    font-size: 16px;
+  }
+}
+//*HOME SECTION TABLET*//
 @media screen and (max-width: 768px) {
   .home-title {
     font-size: 30px;
@@ -262,6 +349,11 @@ ul li {
     left: -25%;
   }
 }
+@media screen and (max-height: 768px) {
+  .work-title {
+    font-size: 30px;
+  }
+}
 //*MYWORK SECTION MOBILE*//
 @media screen and (max-width: 576px) {
   .work-title {
@@ -289,7 +381,7 @@ ul li {
 
 //*CONTACT SECTION*//
 #contact-title {
-  margin-top: 70px !important;
+  margin-top: 100px !important;
 }
 form {
   display: flex;
@@ -364,12 +456,16 @@ input[type="submit"] {
   font-size: 120px;
   opacity: 0.2;
 }
-//*MYWORK SECTION TABLET*//
+//*CONTACT SECTION TABLET*//
+
 @media screen and (max-width: 768px) {
   .contact-watermark {
     width: 600px;
     white-space: nowrap;
     left: -25%;
+  }
+  #contact-title {
+    margin-top: 70px !important;
   }
 }
 @media screen and (max-width: 576px) {
@@ -390,24 +486,16 @@ input[type="submit"] {
     font-size: 10px;
   }
 }
-//*MYWORK FOOTER*//
-.footer {
+//*CONTACT FOOTER*//
+footer {
+  display: flex;
+  justify-content: flex-end;
+  height: auto;
   position: absolute;
-  bottom: -70%;
-  right: 10%;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
-.footer a img {
+footer a img {
   width: 50px;
-  height: 50px;
-}
-@media screen and (max-width: 768px) {
-  .footer {
-    bottom: -90%;
-    right: 10%;
-  }
-}
-@media screen and (max-width: 576px) {
-  .footer {
-    bottom: -25%;
-  }
 }

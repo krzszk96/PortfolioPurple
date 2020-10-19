@@ -11,6 +11,11 @@ body {
   -webkit-tap-highlight-color: transparent;
 }
 
+.stop-scrolling {
+  height: 100%;
+  overflow: hidden;
+}
+
 section {
   position: relative;
   height: 100vh;
@@ -113,6 +118,11 @@ div.scroll-button:hover {
           transform: scale(1.2);
 }
 
+.scroll-btn-rotate {
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+}
+
 .nav-links {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -142,7 +152,6 @@ ul li {
   border-radius: 25px;
   background-color: #6f39b6;
   margin: 20px;
-  cursor: pointer;
 }
 
 .nav-links li:hover {
@@ -156,6 +165,7 @@ ul li {
   font-size: 18px;
   color: white;
   outline: none;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 992px) {
@@ -224,6 +234,17 @@ ul li {
     z-index: 7;
     margin: 15px 20px 0 0;
     outline: none;
+  }
+  .line1 {
+    -webkit-transform: rotate(-45deg) translate(-10px, 6px);
+            transform: rotate(-45deg) translate(-10px, 6px);
+  }
+  .line2 {
+    opacity: 0;
+  }
+  .line3 {
+    -webkit-transform: rotate(45deg) translate(-9px, -8px);
+            transform: rotate(45deg) translate(-9px, -8px);
   }
   .toggle {
     background: #fff !important;
@@ -312,7 +333,7 @@ ul li {
           justify-content: center;
 }
 
-@media screen and (max-width: 992px), screen and (max-height: 760px) {
+@media screen and (max-width: 992px), screen and (max-height: 700px) {
   .home-title {
     font-size: 30px;
   }
@@ -446,7 +467,7 @@ ul li {
   margin-bottom: 20px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px), screen and (max-height: 700px) {
   .work-title {
     font-size: 30px;
   }

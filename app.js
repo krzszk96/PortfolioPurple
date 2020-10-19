@@ -3,6 +3,10 @@ const navLinks = document.querySelector('.nav-links');
 const links = document.querySelectorAll('.nav-links li');
 const burgerLine = document.querySelectorAll('.hamburger .line');
 const scroll = document.querySelector('.scroll-button');
+const line1 = document.getElementById('line1');
+const line2 = document.getElementById('line2');
+const line3 = document.getElementById('line3');
+const scrollBtn = document.querySelector('.scroll-button');
 
 hamburger.addEventListener('click', () => {
   navLinks.classList.toggle('open');
@@ -10,6 +14,10 @@ hamburger.addEventListener('click', () => {
     line.classList.toggle('toggle');
     line.classList.toggle('open');
   })
+  line1.classList.toggle('line1');
+  line2.classList.toggle('line2');
+  line3.classList.toggle('line3');
+  document.body.classList.toggle("stop-scrolling");
 });
 navLinks.addEventListener('click', () => {
   navLinks.classList.toggle('open');
@@ -19,10 +27,18 @@ navLinks.addEventListener('click', () => {
 });
 
 var clicked = false;
+var clickedfirst = false;
 scroll.addEventListener('click', () => {
   
   if(clicked){
-    window.location.href = '#contact';
+    if(clickedfirst){
+      window.location.href = '#home';
+      scrollBtn.classList.remove('scroll-btn-rotate');
+    }else{
+      window.location.href = '#contact';
+      scrollBtn.classList.add('scroll-btn-rotate');
+    }
+    clickedfirst = !clickedfirst;
   }else{
     window.location.href = '#mywork';
   }

@@ -235,8 +235,8 @@ ul li {
     outline: none;
   }
   .line1 {
-    -webkit-transform: rotate(-45deg) translate(-10px, 6px);
-            transform: rotate(-45deg) translate(-10px, 6px);
+    -webkit-transform: rotate(-45deg) translate(-9px, 8px);
+            transform: rotate(-45deg) translate(-9px, 8px);
   }
   .line2 {
     opacity: 0;

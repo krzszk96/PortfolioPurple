@@ -151,8 +151,7 @@ ul li {
       transform: scale(1.2);
     }
   }
-  .language-pl,
-  .language-eng {
+  .language {
     font-size: 14px;
   }
   #pl {
@@ -258,6 +257,7 @@ ul li {
 .home-img {
   display: flex;
   justify-content: center;
+  z-index: 1;
 }
 //*HOME SECTION LAPTOP*//
 @media screen and (max-width: 992px), screen and (max-height: 700px) {

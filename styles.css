@@ -196,8 +196,7 @@ ul li {
     -webkit-transform: scale(1.2);
             transform: scale(1.2);
   }
-  .language-pl,
-  .language-eng {
+  .language {
     font-size: 14px;
   }
   #pl {
@@ -331,6 +330,7 @@ ul li {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  z-index: 1;
 }
 
 @media screen and (max-width: 992px), screen and (max-height: 700px) {

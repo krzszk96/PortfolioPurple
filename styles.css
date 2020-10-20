@@ -196,6 +196,9 @@ ul li {
     -webkit-transform: scale(1.2);
             transform: scale(1.2);
   }
+  .hide {
+    display: none;
+  }
   .language {
     font-size: 14px;
   }
@@ -331,6 +334,7 @@ ul li {
       -ms-flex-pack: center;
           justify-content: center;
   z-index: 1;
+  margin-top: 10px;
 }
 
 @media screen and (max-width: 992px), screen and (max-height: 700px) {

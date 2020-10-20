@@ -26,6 +26,12 @@ navLinks.addEventListener('click', () => {
   })
 });
 
+const scrollBtndisable = document.getElementById('message-content');
+
+scrollBtndisable.addEventListener('click', () => {
+  scrollBtn.classList.add('hide');
+});
+
 var clicked = false;
 var clickedfirst = false;
 scroll.addEventListener('click', () => {

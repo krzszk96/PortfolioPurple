@@ -151,6 +151,9 @@ ul li {
       transform: scale(1.2);
     }
   }
+  .hide {
+    display: none;
+  }
   .language {
     font-size: 14px;
   }
@@ -258,6 +261,7 @@ ul li {
   display: flex;
   justify-content: center;
   z-index: 1;
+  margin-top: 10px;
 }
 //*HOME SECTION LAPTOP*//
 @media screen and (max-width: 992px), screen and (max-height: 700px) {

@@ -1,113 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>krzszk.com</title>
   <link rel="icon" href="./images/KS.png">
   <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-  <link rel="stylesheet" href="styles.css"/>
+  <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;800&display=swap" rel="stylesheet">
 </head>
-  <section id="home">
-    <div class="scroll-button"><img src="./images/arrdown.png"></div>
-    <div class="logo-wrap">
-      <div class="logo showLogo">krzszk.com</div>
-      <div class="language-wrap">
-        <div class="language" id="pl" language='polish'><a href="#" >PL</a></div>
-        <div class="language" id="eng" language='english'>EN</div>
+<section id="home">
+  <div class="scroll-button"><img src="./images/arrdown.png"></div>
+  <div class="logo-wrap">
+    <div class="logo showLogo">krzszk.com</div>
+    <div class="language-wrap">
+      <div class="language" id="pl" language='polish'><a href="#">PL</a></div>
+      <div class="language" id="eng" language='english'>EN</div>
+    </div>
+  </div>
+
+  <nav>
+    <div class="hamburger">
+      <div class="line" id="line1"></div>
+      <div class="line" id="line2"></div>
+      <div class="line" id="line3"></div>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#home" class="menu-home">HOME</a></li>
+      <li><a href="#mywork" class="menu-work">MY WORK</a></li>
+      <li><a href="#contact" class="menu-contact">CONTACT</a></li>
+    </ul>
+  </nav>
+  <div class="home-container">
+    <div class="home-watermark">HOME</div>
+    <div class="home-wrapper">
+      <div class="home-title">Welcome to my portfolio page</div>
+      <div class="home-description">You can review my projects here <br> Feel free to contact me</div>
+      <div class="home-img"><img src="./images/banner.png"></div>
+    </div>
+  </div>
+</section>
+<section class="my-work" id="mywork">
+  <div class="work-watermark">MY WORK</div>
+  <div class="work-container"></div>
+  <div class="work-title">Here you can find my projects</div>
+  <div class="main-carousel"
+    data-flickity='{ "freeScroll": true, "initialIndex": 1, "pageDots": false, "prevNextButtons": false }'>
+    <div class="carousel-cell">
+      <div class="card-title">THE FUEL COMPANY</div>
+      <div class="card-description">
+        <div class="dsc1">Web page I created for company I am working right now. I was responsible for
+          the desing and developing the website itself.</div> <br><br>
+        <div class="dsc1-2">Technologies: Bootstrap, JS, Instagram API, (ton of artwork Photoshop, Adobe Illustrator)
+        </div>
+
+      </div>
+      <div>
+        <div class="card-link "><a class="first-link" href="https://www.thefuelcompany.eu/">Live page version</a></div>
+        <br>
       </div>
     </div>
-    
-    <nav>
-        <div class="hamburger">
-          <div class="line" id="line1"></div>
-          <div class="line" id="line2"></div>
-          <div class="line" id="line3"></div>
-        </div>
-        <ul class="nav-links">
-          <li ><a href="#home" class="menu-home">HOME</a></li>
-          <li ><a href="#mywork" class="menu-work">MY WORK</a></li>
-          <li><a href="#contact" class="menu-contact">CONTACT</a></li>
-        </ul>
-    </nav>
-    <div class="home-container">
-      <div class="home-watermark">HOME</div>
-      <div class="home-wrapper">
-        <div class="home-title">Welcome to my portfolio page</div>
-        <div class="home-description">You can review my projects here <br> Feel free to contact me</div>
-        <div class="home-img"><img src="./images/banner.png"></div>
-      </div>  
-    </div>
-  </section>
-  <section class="my-work" id="mywork">
-    <div class="work-watermark">MY WORK</div>
-    <div class="work-container"></div>
-      <div class="work-title">Here you can find my projects</div>
-      <div class="main-carousel" data-flickity='{ "freeScroll": true, "initialIndex": 2, "pageDots": false, "prevNextButtons": false }'>
-        <div class="carousel-cell">
-          <div class="card-title">MAKEUP PAGE</div>
-          <div class="card-description dsc1">Simple makeup businness page layout. Page contains services gallery, pricing and visits booking calendar. Project will be still developed.</div>
-          <div>
-            <div class="card-link "><a class="first-link" href="http://test.krzszk.com/" >Live page version</a></div>
-            <div class="card-link" id="bottom-link"><a class="second-link" href="https://github.com/krzszk96/KLAUDIA_WLODARZ_MAKEUP">Review code github</a></div>
-          </div>
-        </div>
-        <div class="carousel-cell">
-          <div class="card-title">TREEHOUSE</div>
-          <div class="card-description dsc2">Landing page for any business. This template was created from psd file. Page created for learingn purposes</div>
-          <div>
-            <div class="card-link"><a class="first-link" href="https://krzszk96.github.io/" >Live page version</a></div>
-            <div class="card-link" id="bottom-link"><a class="second-link" href="https://github.com/krzszk96/krzszk96.github.io">Review code github</a></div>
-          </div>
-        </div>
-        <div class="carousel-cell">
-          <div class="card-title">TICTACTOE</div>
-          <div class="card-description dsc3">Tic Tac Toe game created for learining purposes. Game handles 2 players. In the future AI can be added to improve functionality</div>
-          <div>
-            <div class="card-link"><a class="first-link" href="https://krzszk96.github.io/TicTacToe-Game/" >Live page version</a></div>
-            <div class="card-link" id="bottom-link"><a class="second-link" href="https://github.com/krzszk96/TicTacToe-Game">Review code github</a></div>
-          </div>
-        </div>
-        <div class="carousel-cell">
-          <div class="card-title">OLD PORTFOLIO</div>
-          <div class="card-description dsc4">My previous portfolio page. This page was used as a template for current purple page. Sligtly worse design.</div>
-          <div>
-            <div class="card-link"><a class="first-link">Live page version</a></div>
-            <div class="card-link" id="bottom-link"><a class="second-link" href="https://github.com/krzszk96/TicTacToe-Game">Review code github</a></div>
-          </div>
-        </div>
-        <div class="carousel-cell">
-          <div class="card-title">RATES API</div>
-          <div class="card-description dsc5">Coming soon!</div>
-          <div>
-            <div class="card-link"><a class="first-link">Live page version</a></div>
-            <div class="card-link" id="bottom-link"><a class="second-link">Review code github</a></div>
-          </div>
-        </div>
+    <div class="carousel-cell">
+      <div class="card-title">TREEHOUSE</div>
+      <div class="card-description">
+        <div class="dsc2">Landing page for any business. This template was created from psd file. Page
+          created for learingn purposes</div> <br><br>
+        <div class="dsc2-2">Technologies: HTML, JS, CSS</div>
+      </div>
+      <div>
+        <div class="card-link"><a class="first-link" href="https://krzszk96.github.io/">Live page version</a></div>
+        <div class="card-link" id="bottom-link"><a class="second-link"
+            href="https://github.com/krzszk96/krzszk96.github.io">Review code github</a></div>
       </div>
     </div>
-  </section>
-  <section id="contact">
-    <div class="contanct-container">
-      <div class="contact-watermark">CONTACT</div>
-      <div class="work-title" id="contact-title">Here you can contact me</div>
-      <form action="contactform.php" method="post">
-        <input type="text" id="message-title" name="title" placeholder="Type Title here"/>
-        <input type="text" id="mail" name="mail" placeholder="Type Your e-mail here"/>
-        <textarea id="message-content" name="message" placeholder="Type Your message to me here" rows="4" cols="50"></textarea>
-        <input type="submit" id="btnSend" name="submit" value="SEND"  />
-      </form>
+    <div class="carousel-cell">
+      <div class="card-title">ALPOL</div>
+      <div class="card-description">
+        <div class="dsc3">Landing page for CNC business. Page is mobile responsive and presents all services company
+          provides.</div>
+        <br><br>
+        <div class="dsc3-2">Technologies: HTML, JS, CSS, (PHP for the form)</div>
+      </div>
+      <div>
+        <div class="card-link"><a class="first-link" href="https://alpol.pl.pl/">Live page
+            version</a></div><br>
+
+      </div>
     </div>
-    <footer>
-      <a href="https://pl.linkedin.com/"><img src="./images/linkedin.png" /></a>
-      <a href="https://github.com/krzszk96"><img src="./images/github.png" /></a>
-    </footer>
-  </section>  
-  
-  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-  <script src="app.js"></script>
+
+  </div>
+  </div>
+</section>
+<section id="contact">
+  <div class="contanct-container">
+    <div class="contact-watermark">CONTACT</div>
+    <div class="work-title" id="contact-title">Here you can contact me</div>
+    <form action="contactform.php" method="post">
+      <input type="text" id="message-title" name="title" placeholder="Type Title here" />
+      <input type="text" id="mail" name="mail" placeholder="Type Your e-mail here" />
+      <textarea id="message-content" name="message" placeholder="Type Your message to me here" rows="4"
+        cols="50"></textarea>
+      <input type="submit" id="btnSend" name="submit" value="SEND" />
+    </form>
+  </div>
+  <footer>
+    <a href="https://www.linkedin.com/in/krzysiek-szkudlarek-378a36214/"><img src="./images/linkedin.png" /></a>
+    <a href="https://github.com/krzszk96"><img src="./images/github.png" /></a>
+  </footer>
+</section>
+
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+<script src="app.js"></script>
 
 </body>
+
 </html>

@@ -35,17 +35,17 @@ scrollBtndisable.addEventListener('click', () => {
 var clicked = false;
 var clickedfirst = false;
 scroll.addEventListener('click', () => {
-  
-  if(clicked){
-    if(clickedfirst){
+
+  if (clicked) {
+    if (clickedfirst) {
       window.location.href = '#home';
       scrollBtn.classList.remove('scroll-btn-rotate');
-    }else{
+    } else {
       window.location.href = '#contact';
       scrollBtn.classList.add('scroll-btn-rotate');
     }
     clickedfirst = !clickedfirst;
-  }else{
+  } else {
     window.location.href = '#mywork';
   }
   clicked = !clicked;
@@ -64,11 +64,15 @@ const menuWork = document.querySelector('.menu-work');
 const menuContact = document.querySelector('.menu-contact');
 //my work
 const workTitle = document.querySelector('.work-title');
+
 const cardDsc1 = document.querySelector('.dsc1');
+const cardDsc12 = document.querySelector('.dsc1-2');
+
 const cardDsc2 = document.querySelector('.dsc2');
+const cardDsc22 = document.querySelector('.dsc2-2');
+
 const cardDsc3 = document.querySelector('.dsc3');
-const cardDsc4 = document.querySelector('.dsc4');
-const cardDsc5 = document.querySelector('.dsc5');
+const cardDsc32 = document.querySelector('.dsc3-2');
 
 const firstLink = document.querySelectorAll('.first-link');
 const secondLink = document.querySelectorAll('.second-link');
@@ -89,19 +93,23 @@ languages.forEach(el => {
 
     menuHome.textContent = languageData[attr].menuhome;
     menuWork.textContent = languageData[attr].menuwork;
-    menuContact.textContent = languageData[attr].menucontact; 
+    menuContact.textContent = languageData[attr].menucontact;
 
     workTitle.textContent = languageData[attr].worktitle;
-    cardDsc1.textContent = languageData[attr].carddsc1;
-    cardDsc2.textContent = languageData[attr].carddsc2;
-    cardDsc3.textContent = languageData[attr].carddsc3;
-    cardDsc4.textContent = languageData[attr].carddsc4;
-    cardDsc5.textContent = languageData[attr].carddsc5;
 
-    firstLink.forEach(lk =>{
+    cardDsc1.textContent = languageData[attr].carddsc1;
+    cardDsc12.textContent = languageData[attr].carddsc12;
+
+    cardDsc2.textContent = languageData[attr].carddsc2;
+    cardDsc22.textContent = languageData[attr].carddsc22;
+
+    cardDsc3.textContent = languageData[attr].carddsc3;
+    cardDsc32.textContent = languageData[attr].carddsc32;
+
+    firstLink.forEach(lk => {
       lk.textContent = languageData[attr].link1;
     });
-    secondLink.forEach(lk2 =>{
+    secondLink.forEach(lk2 => {
       lk2.textContent = languageData[attr].link2;
     });
 
@@ -114,44 +122,46 @@ languages.forEach(el => {
 });
 
 var languageData = {
-                    "english":{
-                      "hometitle": "Welcome to my portfolio page",
-                      "homedescription": "You can review my projects here \n Feel free to contact me",
-                      "menuhome": "HOME",
-                      "menuwork": "MY WORK",
-                      "menucontact": "CONTACT",
-                      "worktitle": "Here you can find my projects",
-                      "carddsc1": "Simple makeup businness page layout. Page contains services gallery, pricing and visits booking calendar. Project will be still developed.",
-                      "carddsc2": "Landing page for any business. This template was created from psd file. Page created for learingn purposes",
-                      "carddsc3": "Tic Tac Toe game created for learining purposes. Game handles 2 players. In the future AI can be added to improve functionality",
-                      "carddsc4": "My previous portfolio page. This page was used as a template for current purple page. Sligtly worse design",
-                      "carddsc5": "Coming soon!",
-                      "link1": "Live page version",
-                      "link2": "Review code github",
-                      "contacttitle": "Here you can contact me",
-                      "msgtitle": "Type title here",
-                      "msgemail": "Type Your e-mail here",
-                      "msgmessage": "Type your message to me here",
-                      "contactbtn": "SEND"                    
-                    },
-                    "polish":{
-                      "hometitle": "Witaj na mojej stronie portfolio",
-                      "homedescription": "Możesz tutaj zobaczyć moje projekty \n Nie wahaj się ze mną skontaktować",
-                      "menuhome": "GŁÓWNA",
-                      "menuwork": "PROJEKTY",
-                      "menucontact": "KONTAKT",
-                      "worktitle": "Tutaj znajdziesz moje projekty",
-                      "carddsc1": "Prosty szablon dla strony makijażowej. Strona zawiera galerię usług, cennik oraz system do rezerwacji wizyt. Projekt będzie nadal rozwijany.",
-                      "carddsc2": "Wzór strony dla każdej firmy. Ten szablon został stworzony z pliku psd. Strona stworzona do nauki",
-                      "carddsc3": "Gra kółko i krzyżyk. Stworzona do nauki. Gra posiada tryb na 2 graczy. W przyszłości można dodać AI aby poprawić funkcjonalność",
-                      "carddsc4": "Moja poprzednia strona portfolio. Była użyta jako wzór obecnej strony. Nieco gorszy design strony.",
-                      "carddsc5": "Już wkrótce!",
-                      "link1": "Wyświetl stronę",
-                      "link2": "Zobacz kod na github",
-                      "contacttitle": "Tutaj możesz do mnie napisać",
-                      "msgtitle": "Tutaj wpisz tytuł",
-                      "msgemail": "Tutaj wpisz swój e-mail",
-                      "msgmessage": "Wpisz swoją wiadomość do mnie",
-                      "contactbtn": "WYŚLIJ" 
-                    }
+  "english": {
+    "hometitle": "Welcome to my portfolio page",
+    "homedescription": "You can review my projects here \n Feel free to contact me",
+    "menuhome": "HOME",
+    "menuwork": "MY WORK",
+    "menucontact": "CONTACT",
+    "worktitle": "Here you can find my projects",
+    "carddsc1": "Web page I created for company I am working right now. I was responsible for the desing and developing the website itself ",
+    "carddsc12": "Technologies: Bootstrap, JS, Instagram API, (ton of artwork Photoshop, Adobe Illustrator)",
+    "carddsc2": "Landing page for any business. This template was created from psd file. Page created for learingn purposes",
+    "carddsc22": "Technologies: HTML, JS, CSS",
+    "carddsc3": "Landing page for CNC business. Page is mobile responsive and presents all services company provides.",
+    "carddsc32": "Technologies: HTML, JS, CSS, (PHP for the form)",
+    "link1": "Live page version",
+    "link2": "Review code github",
+    "contacttitle": "Here you can contact me",
+    "msgtitle": "Type title here",
+    "msgemail": "Type Your e-mail here",
+    "msgmessage": "Type your message to me here",
+    "contactbtn": "SEND"
+  },
+  "polish": {
+    "hometitle": "Witaj na mojej stronie portfolio",
+    "homedescription": "Możesz tutaj zobaczyć moje projekty \n Nie wahaj się ze mną skontaktować",
+    "menuhome": "GŁÓWNA",
+    "menuwork": "PROJEKTY",
+    "menucontact": "KONTAKT",
+    "worktitle": "Tutaj znajdziesz moje projekty",
+    "carddsc1": "Strona którą stworzyłem firmie dla której obecnie pracuję. Przy projekcie byłem odpowiedzialny za stworzenie projektu jak i za zbudowanie samej strony.",
+    "carddsc12": "Technologie: Bootstrap, JS, Instagram API, (wiele grafik Photoshop, Adobe Illustrator)",
+    "carddsc2": "Wzór strony dla każdej firmy. Ten szablon został stworzony z pliku psd. Strona stworzona do nauki",
+    "carddsc22": "Technologie: HTML, JS, CSS",
+    "carddsc3": "Strona stworzona dla firmy form laserowych. Strona jest responsywna i prezentuje wszystkie usługi jakie świadczy firma.",
+    "carddsc32": "Technologie: HTML, JS, CSS, (PHP do formularza)",
+    "link1": "Wyświetl stronę",
+    "link2": "Zobacz kod na github",
+    "contacttitle": "Tutaj możesz do mnie napisać",
+    "msgtitle": "Tutaj wpisz tytuł",
+    "msgemail": "Tutaj wpisz swój e-mail",
+    "msgmessage": "Wpisz swoją wiadomość do mnie",
+    "contactbtn": "WYŚLIJ"
+  }
 }
